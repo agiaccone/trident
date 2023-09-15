@@ -1,0 +1,20 @@
+type Query {
+    shows(titleFilter: String): [Show]
+    subscriptions : [Subscription]
+}
+
+type Show {
+    title: String
+    releaseYear: Int
+}
+
+
+type Subscription {
+    id : Int
+    subType : String
+    name : String
+    regiId : Int
+    startDate : String
+    endDate : String
+    products : [Int]
+}
