@@ -3,8 +3,6 @@ package com.nytimes.spg.smt.example.Trident;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Data
@@ -18,19 +16,6 @@ public class Subscription {
     String  startDate;
     String endDate;
     List<Integer> products;
-
-    public Subscription(String subType, String name, Long regiId, Date startDate, Date endDate, List<Integer> inputProducts) {
-        this.subType = subType;
-        this.name = name;
-        this.startDate = DateUtils.dateFormat.format(startDate);
-        this.endDate = DateUtils.dateFormat.format(endDate);
-        this.regiId = regiId;
-        this.products = new ArrayList<>();
-        for (Integer aNumber : inputProducts) {
-            products.add( Integer.valueOf(aNumber.intValue()));
-        }
-    }
-
 
 
     public String toString() {

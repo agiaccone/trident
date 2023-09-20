@@ -1,5 +1,4 @@
 type Query {
-    shows(titleFilter: String): [Show]
     subscriptions : [Subscription]
 }
 
@@ -8,7 +7,6 @@ type Show {
     releaseYear: Int
 }
 
-
 type Subscription {
     id : Int
     subType : String
@@ -16,5 +14,14 @@ type Subscription {
     regiId : Int
     startDate : String
     endDate : String
-    products : [Int]
+    products : [Product]
+}
+
+type Product {
+    id : Int
+    price: Float
+    name : String
+    source : String
+    startDate : String
+    endDate : String
 }
